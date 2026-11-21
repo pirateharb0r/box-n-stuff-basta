@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Red Box Clicker and share suggestions to help improve the game.">
+    <title>Red Box Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Ahh yes box clicker</h1>
+        <p>Just click the red boc as fast as you can</p>
+    </header>
+
+    <main>
+
+        <!-- GAME SECTION -->
+        <section class="game-section">
+
+            <div class="stats">
+                <div>
+                    Score: <span id="score">0</span>
+                </div>
+
+                <div>
+                    Time: <span id="timer">30</span>s
+                </div>
+            </div>
+
+            <button id="startButton" type="button">
+                Start Game
+            </button>
+
+            <div id="gameArea">
+                <button
+                    id="target"
+                    type="button"
+                    aria-label="Click the red box"
+                ></button>
+            </div>
+
+            <p id="gameMessage">
+                Just try the game gng
+            </p>
+
+        </section>
+
+
+        <!-- FEEDBACK SECTION -->
+        <section class="feedback-section">
+
+            <h2>Help improve the game</h2>
+
+            <p>
+                Have an idea or found a bug?
+                Send your feedback ples, it make game better
+            </p>
+
+            <p class="privacy-notice">
+                Your feedback will be sent to the game developer (ed).
+                Input your personal info if you dare.
+            </p>
+
+            <form id="feedbackForm" autocomplete="off">
+
+                <label for="feedbackType">
+                    Feedback type
+                </label>
+
+                <select id="feedbackType" required>
+                    <option value="Suggestion">
+                        Suggestion
+                    </option>
+
+                    <option value="Bug Report">
+                        Bug Report
+                    </option>
+
+                    <option value="General Feedback">
+                        General Feedback
+                    </option>
+                </select>
+
+
+                <label for="feedbackMessage">
+                    Your message
+                </label>
+
+                <textarea
+                    id="feedbackMessage"
+                    placeholder="Write your suggestion here..."
+                    maxlength="1000"
+                    required
+                ></textarea>
+
+
+                <button id="submitFeedback" type="submit">
+                    Submit Feedback
+                </button>
+
+            </form>
+
+            <p
+                id="feedbackResponse"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Made by ed | Red Box Clicker</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
